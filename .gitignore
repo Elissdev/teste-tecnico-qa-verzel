@@ -1,0 +1,15 @@
+# Dependências
+node_modules/
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+.playwright/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
