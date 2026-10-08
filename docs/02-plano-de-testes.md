@@ -14,7 +14,7 @@ Validar a entrega do card VZS-142 da Verzel Store, que adiciona ao carrinho a ap
 - Exibição dos valores com 2 casas decimais
 - Comportamento e códigos de erro da API
 
-**Fora do escopo** (o PDF diz explicitamente):
+**Fora do escopo** 
 - Testes de carga, estresse e segurança
 - Login, cadastro, pagamento online, consulta de pedidos
 
@@ -28,7 +28,7 @@ Validar a entrega do card VZS-142 da Verzel Store, que adiciona ao carrinho a ap
 
 ## Tipos de teste
 
-- Manual (interface)
+- Manual (Na interface)
 - Exploratório
 - API
 - Automatizado (Playwright)
