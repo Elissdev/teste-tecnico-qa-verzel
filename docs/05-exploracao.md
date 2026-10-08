@@ -29,4 +29,13 @@ Perguntas em aberto. Cada item deve ser verificado na prática antes de virar ce
 
 ## 3. Achados
 
-(itens encontrados na exploração: comportamentos inesperados, bugs, confirmações)
+### Observação de usabilidade - mensagem de cupom não some ao digitar
+
+- **Onde:** carrinho, campo de cupom de desconto.
+- **O que acontece:** após clicar em "Aplicar cupom" com um código inválido, a mensagem "Cupom inválido." permanece na tela enquanto o usuário continua digitando. Ela só desaparece quando o cupom é removido ou quando um cupom válido é aplicado.
+- **Relação com os critérios:** não viola nenhum critério de aceite. É uma questão de usabilidade, não um bug funcional.
+- **Evidência:** vídeo gravado durante a execução do CT-002.
+
+### Confirmação - espaço no meio do código não é ignorado
+
+- Um cupom digitado como "BEM VINDO10" (com espaço no meio) é recusado com "Cupom inválido.". Isso está de acordo com o CA02, que trata apenas de espaços no início e no fim do código.
