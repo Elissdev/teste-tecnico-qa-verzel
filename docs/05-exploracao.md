@@ -16,6 +16,8 @@ Perguntas em aberto. Cada item deve ser verificado na prática antes de virar ce
   - O segundo substitui o primeiro, ou é bloqueado?
   - A tela exige remover o cupom atual antes de aplicar outro?
 
+**Verificado durante a execução do CT-001:** ao aplicar o cupom, o campo de digitação é substituído pela mensagem "Cupom BEMVINDO10 aplicado." e por um botão "Remover cupom". Não existe campo para digitar um segundo cupom enquanto um está ativo, então a troca só é possível removendo o atual. Isso confirma o comportamento descrito no CA05.
+
 ## 2. Sessões exploratórias
 
 ### Sessão 1

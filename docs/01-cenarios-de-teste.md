@@ -135,7 +135,7 @@ Cenário: informar quanto falta para o frete grátis
   Dado que adicionei 1 unidade de "Calça Jeans Slim" (P002) no carrinho
   Quando o carrinho é calculado
   Então o frete deve ser R$ 19,90
-  E deve ser informado que faltam R$ 60,10 para o frete grátis
+  E a mensagem "Faltam R$ 60,10 para o frete grátis." deve ser exibida
 ```
 
 ---
