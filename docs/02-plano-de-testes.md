@@ -2,12 +2,17 @@
 
 ## Objetivo
 
-TODO: o que essa entrega resolve e o que você pretende validar.
+Validar a entrega do card VZS-142 da Verzel Store, que adiciona ao carrinho a aplicação de cupom de desconto e a regra de frete grátis, conferindo os 11 critérios de aceite da documentação. Quero conferir se os cálculos de desconto, frete e total estão certos e se as validações de cupom, limite de unidades e dados do cliente funcionam na tela e na API.
 
 ## Escopo
 
 **Dentro do escopo:**
-- TODO: ex.: cupons, frete grátis, limite de 5 unidades, validação de dados do cliente, API...
+- Aplicação, remoção e validação de cupom de desconto (cupom válido, inexistente e expirado)
+- Regra de frete grátis e cálculo do valor faltante para o frete grátis
+- Cálculo de subtotal, desconto, frete e total
+- Limite de 5 unidades por produto, na interface e na API
+- Exibição dos valores com 2 casas decimais
+- Comportamento e códigos de erro da API
 
 **Fora do escopo** (o PDF diz explicitamente):
 - Testes de carga, estresse e segurança
@@ -15,12 +20,11 @@ TODO: o que essa entrega resolve e o que você pretende validar.
 
 ## Técnicas de teste que vou usar
 
-TODO: explique brevemente e diga onde aplica. Sugestões:
-- Partição de equivalência (ex.: subtotal < 200 vs >= 200)
-- Análise de valor limite (ex.: R$ 199,90 / R$ 200,00 / R$ 209,40)
-- Tabela de decisão (cupom válido/expirado/inexistente vs frete)
-- Teste exploratório (sessão com tempo definido e objetivo)
-- Teste de API (contrato e códigos de erro)
+- **Partição de equivalência:** separar os carrinhos em duas faixas, abaixo e a partir de R$ 200,00, para o teste do frete.
+- **Análise de valor limite:** testar os valores R$ 199,90, R$ 200,00 e R$ 209,40, que ficam em volta do limite do frete grátis.
+- **Tabela de decisão:** cruzar cupom válido, expirado e inexistente com a regra de frete, para cobrir as combinações dos critérios.
+- **Teste exploratório:** sessão com tempo definido e objetivo, para investigar comportamentos não descritos na documentação, como a tentativa de aplicar um segundo cupom.
+- **Teste de API:** conferir o contrato dos endpoints e os códigos de erro documentados (status 400, 404, 405 e 422).
 
 ## Tipos de teste
 
