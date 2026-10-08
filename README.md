@@ -1,8 +1,5 @@
 # Teste Técnico QA Júnior - Verzel Store
 
-> **TEMPLATE - preencha os campos marcados com `TODO` antes de enviar.**
-> Este README é a primeira coisa que a avaliadora vai ler. Deixe-o claro e completo.
-
 ## Sobre
 
 - **Candidata:** Elissandra Santos da Silva
@@ -21,35 +18,34 @@
 | Entrega | Arquivo |
 |---|---|
 | Cenários de teste (Gherkin) | [`docs/01-cenarios-de-teste.md`](docs/01-cenarios-de-teste.md) |
-| Plano / estratégia de testes | [`docs/02-plano-de-testes.md`](docs/02-plano-de-testes.md) |
+| Plano de testes | [`docs/02-plano-de-testes.md`](docs/02-plano-de-testes.md) |
 | Execução dos testes (manual + exploratório + API) | [`docs/03-execucao.md`](docs/03-execucao.md) |
 | Report de bugs | [`docs/04-bugs.md`](docs/04-bugs.md) |
+| Exploração e ambiguidades | [`docs/05-exploracao.md`](docs/05-exploracao.md) |
 | Evidências (screenshots/vídeos) | [`docs/evidencias/`](docs/evidencias/) |
 | Automação Playwright | [`playwright/`](playwright/) |
 
 ## Como rodar a automação
 
-TODO: descreva os passos **depois** que os testes estiverem prontos. Exemplo:
+TODO: descreva os passos depois que os testes estiverem prontos. Exemplo:
 
 ```bash
 cd playwright
 npm install
-npx playwright install   # baixa os navegadores
-npm test                 # roda todos os testes
-npm run test:headed      # roda com o navegador visível
-npm run report           # abre o relatório HTML
+npx playwright install
+npm test
+npm run test:headed
+npm run report
 ```
 
 ## Ferramentas usadas
 
-- TODO: ex.: Playwright, Node.js, Postman/curl, navegador X, planilha/Markdown...
+TODO: ex.: Playwright, Node.js, Postman/curl, navegador, Markdown.
 
 ## Uso de IA
 
-TODO: conte onde e como usou IA (o PDF permite e pede transparência).
-Se não usou em alguma parte, diga também.
+TODO: conte onde e como usou IA (o PDF permite e pede transparência). Se não usou em alguma parte, diga também.
 
 ## Observações e premissas
 
-TODO: registre aqui ambiguidades da documentação e como você interpretou cada uma
-(a regra "Ambiguidades" do teste pede isso explicitamente).
+TODO: registre as ambiguidades da documentação e como você interpretou cada uma.

@@ -1,15 +1,18 @@
 # Report de Bugs - VZS-142
 
-> **TEMPLATE.** Um bug por seção. Sugestão de campos abaixo.
-> **Severidade** = impacto técnico (Crítica/Alta/Média/Baixa).
-> **Prioridade** = urgência de correção (Alta/Média/Baixa).
+Um bug por seção. Use a estrutura abaixo para cada um.
 
-## Como preencher (guia rápido)
+Legenda:
+
+- **Severidade** = impacto técnico (Crítica / Alta / Média / Baixa).
+- **Prioridade** = urgência de correção (Alta / Média / Baixa).
+
+## Como preencher
 
 - **Título:** objetivo e específico. Ex.: "Frete grátis não aplicado com subtotal exatamente R$ 200,00".
 - **Passos:** numerados e reproduzíveis por outra pessoa.
 - **Esperado vs Obtido:** cite o critério de aceite que foi violado.
-- **Evidência:** print/vídeo em `evidencias/`.
+- **Evidência:** print ou vídeo em `evidencias/`.
 
 ---
 
@@ -34,7 +37,3 @@
 **Evidência:** [`evidencias/TODO.png`](evidencias/TODO.png)
 
 **Observações:** TODO (frequência, workaround, itens relacionados)
-
----
-
-<!-- TODO: adicione BUG-002, BUG-003, ... -->
