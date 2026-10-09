@@ -1,0 +1,24 @@
+# Evidência CT-010 - Limite de 5 unidades na API
+
+Data: 08/10/2026
+Endpoint: POST /api/pedidos
+Esperado (CA10): 6 unidades de um produto devem retornar HTTP 422 com código QUANTIDADE_MAXIMA_EXCEDIDA.
+
+## Requisição com 6 unidades de P001
+
+```bash
+curl -i -X POST "https://verzel-store.qa-test-verzel-store.workers.dev/api/pedidos" -H "Content-Type: application/json" -d '{"cliente":{"nome":"Elissandra Silva","email":"elissandra.teste@example.com","cep":"01001000"},"itens":[{"produtoId":"P001","quantidade":6}]}'
+```
+
+## Resposta
+
+```http
+HTTP/2 201 
+date: [omitido]
+content-type: application/json; charset=utf-8
+content-length: 378
+
+{"numero":"VZ-019364","criadoEm":"2026-10-09T01:42:09.622Z","cliente":{"nome":"Elissandra Silva","email":"elissandra.teste@example.com","cep":"01001000"},"itens":[{"produtoId":"P001","nome":"Camiseta Essencial","precoUnitario":59.9,"quantidade":6,"total":359.4}],"subtotal":359.4,"desconto":0,"frete":0,"freteGratis":true,"valorFaltanteFreteGratis":0,"total":359.4,"cupom":null}
+```
+
+Resultado: a API aceitou a quantidade e criou o pedido (HTTP 201), sem aplicar o limite de 5 unidades.

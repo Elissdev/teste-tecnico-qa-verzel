@@ -9,7 +9,7 @@ Status possíveis: Passou / Falhou / Bloqueado / Não executado.
 - Data da execução: 08/10/2026
 - Ambiente/versão: Verzel Store VZS-142 v2.3.0
 - Navegador: Google Chrome (desktop)
-- Total de cenários: 11 | Passou: 6 | Falhou: 2 | Bloqueado: 0 | Não executado: 3
+- Total de cenários: 11 | Passou: 6 | Falhou: 3 | Bloqueado: 0 | Não executado: 2
 
 Observação: o CT-002 também foi conferido pela API, como complemento, porque a tela normaliza o código digitado para maiúsculo e o print sozinho não prova a variação testada.
 
@@ -33,7 +33,7 @@ Observação: o CT-002 também foi conferido pela API, como complemento, porque 
 | Cenário | Endpoint | Status | Evidência | Observação |
 |---|---|---|---|---|
 | CT-002 (complemento) | POST /api/carrinho/calcular | Passou | saída do terminal | Variações de caixa e espaços nas pontas aceitas, com desconto de R$ 13,99. Código com espaço no meio (BEM VINDO10) é recusado com "Cupom inválido.". |
-| CT-010 | POST /api/pedidos | Não executado | | Enviar 6 unidades de um produto deve retornar status 422 e código QUANTIDADE_MAXIMA_EXCEDIDA. |
+| CT-010 | POST /api/pedidos | Falhou | [saída do terminal](evidencias/CT-010-api-6-unidades.txt) | Com 6 unidades de um produto a API respondeu HTTP 201 e criou o pedido, em vez de retornar 422 com QUANTIDADE_MAXIMA_EXCEDIDA. As demais validações (item duplicado, quantidade inválida e produto inexistente) retornam 422 corretamente. Ver BUG-002. |
 
 ## 3. Sessão exploratória
 
@@ -44,9 +44,10 @@ Observação: o CT-002 também foi conferido pela API, como complemento, porque 
 
 ## 4. Falhas e desvios encontrados
 
-Foi encontrado um bug funcional, no caso de borda do frete grátis com subtotal exatamente R$ 200,00 (BUG-001).
+Encontrei dois bugs funcionais: o frete grátis com subtotal exatamente R$ 200,00 (BUG-001) e o limite de 5 unidades não aplicado na API (BUG-002).
 
 | Cenário | Bug | Link |
 |---|---|---|
 | CT-006 | BUG-001 | [ver](04-bugs.md#bug-001) |
 | CT-008 | BUG-001 | [ver](04-bugs.md#bug-001) |
+| CT-010 | BUG-002 | [ver](04-bugs.md#bug-002) |
