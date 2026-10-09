@@ -196,9 +196,11 @@ Cenário: API deve responder com erro
 - **Prioridade:** Média
 
 ```gherkin
-Cenário: exibir frete e total com duas casas decimais
-  Dado que adicionei 1x "Mochila Urbana 20L" (P005) e 2x "Garrafa Térmica 750ml" (P008) no carrinho
+Cenário: exibir valores com duas casas decimais
+  Dado que adicionei 1 unidade de "Tênis Casual Urbano" (P003) no carrinho
   Quando aplico o cupom "BEMVINDO10"
-  Então o frete deve ser exibido como "R$ 0,00"
-  E o total deve ser exibido como "R$ 180,00"
+  Então o subtotal deve ser exibido como "R$ 189,90"
+  E o desconto deve ser exibido como "R$ 18,99"
+  E o frete deve ser exibido como "R$ 19,90"
+  E o total deve ser exibido como "R$ 190,81"
 ```

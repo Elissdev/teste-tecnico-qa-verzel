@@ -18,6 +18,11 @@ Perguntas em aberto. Cada item deve ser verificado na prática antes de virar ce
 
 **Verificado durante a execução do CT-001:** ao aplicar o cupom, o campo de digitação é substituído pela mensagem "Cupom BEMVINDO10 aplicado." e por um botão "Remover cupom". Não existe campo para digitar um segundo cupom enquanto um está ativo, então a troca só é possível removendo o atual. Isso confirma o comportamento descrito no CA05.
 
+### CA11 - Exibição dos valores
+
+- O cenário CT-011 usava o carrinho de R$ 200,00 (1x Mochila Urbana 20L e 2x Garrafa Térmica 750ml) com o cupom BEMVINDO10, esperando frete grátis e total R$ 180,00. Esse carrinho cai no BUG-001, então o cenário acabaria medindo o bug do frete junto.
+- Para separar as duas coisas, o CT-011 passou a usar um carrinho abaixo do limite (1x Tênis Casual Urbano, R$ 189,90, com o cupom BEMVINDO10), que gera desconto R$ 18,99, frete R$ 19,90 e total R$ 190,81. Assim o CT-011 verifica apenas a exibição dos valores, sem depender da regra de frete.
+
 ## 2. Sessões exploratórias
 
 ### Sessão 1
