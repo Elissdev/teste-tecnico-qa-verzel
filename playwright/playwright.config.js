@@ -1,8 +1,8 @@
-// Configuração base do Playwright.
-// TODO (você vai ajustar junto comigo no Dia 5):
-//  - baseURL é o endereço da loja (deixei pronto)
-//  - escolha os navegadores que quer rodar (projects)
-//  - documente no README como rodar
+// Configuração do Playwright para o teste técnico QA Júnior - Verzel Store.
+//
+// - baseURL aponta para a loja de teste.
+// - 1 worker, porque o ambiente é compartilhado entre candidatos.
+// - Roda no Chromium por padrão.
 
 const { defineConfig, devices } = require('@playwright/test');
 
@@ -27,7 +27,7 @@ module.exports = defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    // TODO: descomente se quiser rodar em outros navegadores
+    // Para rodar também em Firefox/WebKit, descomente as linhas abaixo.
     // { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
     // { name: 'webkit', use: { ...devices['Desktop Safari'] } },
   ],
