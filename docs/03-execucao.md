@@ -9,7 +9,7 @@ Status possíveis: Passou / Falhou / Bloqueado / Não executado.
 - Data da execução: 08/10/2026
 - Ambiente/versão: Verzel Store VZS-142 v2.3.0
 - Navegador: Google Chrome (desktop)
-- Total de cenários: 11 | Passou: 4 | Falhou: 0 | Bloqueado: 0 | Não executado: 7
+- Total de cenários: 11 | Passou: 5 | Falhou: 1 | Bloqueado: 0 | Não executado: 5
 
 Observação: o CT-002 também foi conferido pela API, como complemento, porque a tela normaliza o código digitado para maiúsculo e o print sozinho não prova a variação testada.
 
@@ -21,8 +21,8 @@ Observação: o CT-002 também foi conferido pela API, como complemento, porque 
 | CT-002 | CA02 | Passou | [vídeo](evidencias/CT-002-variacoes-caixa-e-espacos.webm) | As três variações testadas no vídeo (bemvindo10, BemVindo10 e com espaços nas pontas) foram aceitas com desconto de R$ 13,99. A variação exata já havia sido coberta no CT-001. |
 | CT-003 | CA03 | Passou | [print](evidencias/CT-003-cupom-inexistente.png) | Cupom DESCONTO10 recusado com a mensagem "Cupom inválido.", desconto R$ 0,00, frete R$ 19,90 e total R$ 159,80. |
 | CT-004 | CA04 | Passou | [print](evidencias/CT-004-cupom-expirado.png) | Cupom VERAO2026 recusado com a mensagem "Cupom expirado.", desconto R$ 0,00, frete R$ 19,90 e total R$ 159,80. |
-| CT-005 | CA05 | Não executado | | |
-| CT-006 | CA06 | Não executado | | |
+| CT-005 | CA05 | Passou | [antes](evidencias/CT-005-antes-de-remover-cupom.png) e [depois](evidencias/CT-005-cupom-removido.png) | Após remover o cupom, o desconto volta a R$ 0,00, frete R$ 19,90 e total R$ 159,80. |
+| CT-006 | CA06 | Falhou | [199,90](evidencias/CT-006-carrinho-199-90.png), [200,00](evidencias/CT-006-carrinho-200-00.png) e [209,40](evidencias/CT-006-carrinho-209-40.png) | Subtotal R$ 199,90: frete R$ 19,90 (correto). Subtotal R$ 209,40: frete grátis (correto). Subtotal exatamente R$ 200,00: frete R$ 19,90, quando deveria ser grátis. Ver BUG-001. |
 | CT-007 | CA07 | Não executado | | |
 | CT-008 | CA08 | Não executado | | |
 | CT-009 | CA10 | Não executado | | |
@@ -44,8 +44,8 @@ Observação: o CT-002 também foi conferido pela API, como complemento, porque 
 
 ## 4. Falhas e desvios encontrados
 
-Nenhum bug funcional encontrado até o momento. O único achado registrado é uma observação de usabilidade, detalhada em [`05-exploracao.md`](05-exploracao.md).
+Foi encontrado um bug funcional, no caso de borda do frete grátis com subtotal exatamente R$ 200,00 (BUG-001).
 
 | Cenário | Bug | Link |
 |---|---|---|
-| - | Nenhum até o momento | - |
+| CT-006 | BUG-001 | [ver](04-bugs.md#bug-001) |
