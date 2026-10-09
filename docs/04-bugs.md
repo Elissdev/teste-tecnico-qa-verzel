@@ -32,4 +32,4 @@ Legenda:
 **Observações:**
 - Com subtotal de R$ 199,90 o frete é R$ 19,90 (correto) e com R$ 209,40 o frete é grátis (correto). A falha ocorre apenas no valor exatamente igual a R$ 200,00, o que indica uma comparação estrita na regra (maior que 200 em vez de maior ou igual a 200).
 - O mesmo comportamento foi confirmado pela API `POST /api/carrinho/calcular`: para subtotal 200,00, a resposta traz `frete: 19.9` e `freteGratis: false`. O campo `valorFaltanteFreteGratis` retorna 0, o que é incoerente, pois informa que não falta nada para o frete grátis e mesmo assim cobra o frete.
-- Como o CA08 define que o frete grátis considera o subtotal antes do desconto, o cenário CT-008 usa esse mesmo carrinho e tende a falhar pelo mesmo motivo.
+- Como o CA08 define que o frete grátis considera o subtotal antes do desconto, o cenário CT-008 usa esse mesmo carrinho e falhou pelo mesmo motivo: com o cupom BEMVINDO10, o desconto foi R$ 20,00, mas o frete continuou R$ 19,90 e o total ficou R$ 199,90, em vez de frete grátis e total R$ 180,00. Evidência: [`evidencias/CT-008-frete-gratis-com-desconto.png`](evidencias/CT-008-frete-gratis-com-desconto.png).
