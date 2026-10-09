@@ -27,10 +27,10 @@ Perguntas em aberto. Cada item deve ser verificado na prática antes de virar ce
 
 ### Sessão 1
 
-- **Charter:** (o que pretendo investigar e por quê)
-- **Duração:** (ex.: 30 minutos)
-- **O que foi explorado:**
-- **Achados:**
+- **Charter:** investigar o comportamento do carrinho com cupom aplicado (segundo cupom, remoção e reaplicação), o texto real das mensagens, a validação de caixa e espaços, o limite de 5 unidades na interface e na API e a regra de frete grátis no valor de borda.
+- **Duração:** cerca de 40 minutos, distribuídos entre a execução dos cenários e as consultas à API, em 08/10/2026.
+- **O que foi explorado:** aplicação e remoção de cupom na tela; comportamento ao aplicar um segundo cupom; mensagens "Cupom inválido." e "Cupom expirado."; variações de caixa e espaços no código; tentativa de adicionar mais de 5 unidades na interface e na API; exibição dos valores com 2 casas; frete grátis nos valores R$ 199,90, R$ 200,00 e R$ 209,40.
+- **Achados:** o frete grátis não é aplicado com subtotal exatamente R$ 200,00 (BUG-001); a API aceita mais de 5 unidades por produto (BUG-002); a mensagem de cupom inválido não some ao digitar (observação de usabilidade); o código com espaço no meio é recusado, como esperado.
 
 ## 3. Achados
 
