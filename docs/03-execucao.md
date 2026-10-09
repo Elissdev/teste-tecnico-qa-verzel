@@ -9,7 +9,7 @@ Status possíveis: Passou / Falhou / Bloqueado / Não executado.
 - Data da execução: 08/10/2026
 - Ambiente/versão: Verzel Store VZS-142 v2.3.0
 - Navegador: Google Chrome (desktop)
-- Total de cenários: 11 | Passou: 2 | Falhou: 0 | Bloqueado: 0 | Não executado: 9
+- Total de cenários: 11 | Passou: 4 | Falhou: 0 | Bloqueado: 0 | Não executado: 7
 
 Observação: o CT-002 também foi conferido pela API, como complemento, porque a tela normaliza o código digitado para maiúsculo e o print sozinho não prova a variação testada.
 
@@ -19,8 +19,8 @@ Observação: o CT-002 também foi conferido pela API, como complemento, porque 
 |---|---|---|---|---|
 | CT-001 | CA01, CA07, CA09 | Passou | [antes](evidencias/CT-001-antes.jpeg) e [depois](evidencias/CT-001-depois.jpeg) | Subtotal R$ 139,90, desconto R$ 13,99, frete R$ 19,90 e total R$ 145,81. |
 | CT-002 | CA02 | Passou | [vídeo](evidencias/CT-002-variacoes-caixa-e-espacos.webm) | As três variações testadas no vídeo (bemvindo10, BemVindo10 e com espaços nas pontas) foram aceitas com desconto de R$ 13,99. A variação exata já havia sido coberta no CT-001. |
-| CT-003 | CA03 | Não executado | | |
-| CT-004 | CA04 | Não executado | | |
+| CT-003 | CA03 | Passou | [print](evidencias/CT-003-cupom-inexistente.png) | Cupom DESCONTO10 recusado com a mensagem "Cupom inválido.", desconto R$ 0,00, frete R$ 19,90 e total R$ 159,80. |
+| CT-004 | CA04 | Passou | [print](evidencias/CT-004-cupom-expirado.png) | Cupom VERAO2026 recusado com a mensagem "Cupom expirado.", desconto R$ 0,00, frete R$ 19,90 e total R$ 159,80. |
 | CT-005 | CA05 | Não executado | | |
 | CT-006 | CA06 | Não executado | | |
 | CT-007 | CA07 | Não executado | | |
